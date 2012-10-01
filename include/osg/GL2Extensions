@@ -129,7 +129,12 @@ typedef char GLchar;
 
 #if !defined(GL_SAMPLER_1D)
 #define GL_SAMPLER_1D                     0x8B5D
+#endif
+#if !defined(GL_SAMPLER_3D)
 #define GL_SAMPLER_3D                     0x8B5F
+#endif
+
+#if !defined(GL_SAMPLER_1D_SHADOW)
 #define GL_SAMPLER_1D_SHADOW              0x8B61
 #define GL_SAMPLER_2D_SHADOW              0x8B62
 #endif
@@ -159,6 +164,10 @@ typedef char GLchar;
 #define GL_COMPRESSED_SRGB_ALPHA          0x8C49
 #define GL_COMPRESSED_SLUMINANCE          0x8C4A
 #define GL_COMPRESSED_SLUMINANCE_ALPHA    0x8C4B
+#endif
+
+#ifndef GL_ARB_framebuffer_sRGB
+#define GL_FRAMEBUFFER_SRGB               0x8DB9
 #endif
 
 // EXT_geometry_shader4
